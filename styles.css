@@ -1067,7 +1067,8 @@ button {
 .cta-copy {
   position: absolute;
   left: 108px;
-  top: 62px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 560px;
 }
 
