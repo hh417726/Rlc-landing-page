@@ -31,4 +31,46 @@
       scrollToDesignY(y);
     });
   });
+
+  const showcaseTrack = document.querySelector(".showcase-track");
+  const showcaseViewport = document.querySelector(".showcase-viewport");
+  const showcasePrev = document.querySelector('[data-carousel-dir="prev"]');
+  const showcaseNext = document.querySelector('[data-carousel-dir="next"]');
+
+  if (showcaseTrack && showcaseViewport && showcasePrev && showcaseNext) {
+    const pages = Array.from(showcaseTrack.children);
+    let activePage = 0;
+
+    function updateShowcase() {
+      if (pages.length === 0) {
+        return;
+      }
+
+      const pageWidth = showcaseViewport.clientWidth;
+      const maxPage = Math.max(0, pages.length - 1);
+
+      activePage = Math.min(activePage, maxPage);
+      showcaseTrack.style.transform = `translateX(${-activePage * pageWidth}px)`;
+      showcasePrev.disabled = activePage === 0;
+      showcaseNext.disabled = activePage === maxPage;
+    }
+
+    showcasePrev.addEventListener("click", () => {
+      if (activePage > 0) {
+        activePage -= 1;
+        updateShowcase();
+      }
+    });
+
+    showcaseNext.addEventListener("click", () => {
+      const maxPage = Math.max(0, pages.length - 1);
+      if (activePage < maxPage) {
+        activePage += 1;
+        updateShowcase();
+      }
+    });
+
+    updateShowcase();
+    window.addEventListener("resize", updateShowcase, { passive: true });
+  }
 })();

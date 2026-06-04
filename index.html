@@ -20,10 +20,9 @@
               <span>真實人生挑戰</span>
             </button>
             <nav class="main-nav">
-              <button class="jump" type="button" data-scroll-y="2503">App介紹</button>
-              <button class="jump" type="button" data-scroll-y="2869">聯絡我們</button>
+              <button class="jump" type="button" data-scroll-y="1120">App介紹</button>
+              <a href="./contact.html">聯絡我們</a>
             </nav>
-            <button class="top-download jump" type="button" data-scroll-y="4498">立即下載</button>
           </header>
 
           <section class="hero" aria-label="真實世界等你挑戰">
@@ -37,24 +36,24 @@
               </h1>
               <p>挑戰自我・贏取積分・兌換驚喜好禮</p>
               <div class="download-row">
-                <button class="store-button jump" type="button" data-scroll-y="4498">
-                  <span class="store-icon apple">Apple</span>
-                  <span>
-                    <small>Download on the</small>
-                    App Store
+                <button class="store-button jump" type="button" data-scroll-y="3940">
+                  <img class="store-button-icon store-button-icon-ios" src="./assets/cta-ios-icon.svg" alt="" />
+                  <span class="store-button-copy">
+                    <small>iOS 下載</small>
+                    <span class="store-button-title">App Store</span>
                   </span>
                 </button>
-                <button class="store-button jump" type="button" data-scroll-y="4498">
-                  <span class="store-icon android">Android</span>
-                  <span>
-                    <small>Download on the</small>
-                    android
+                <button class="store-button jump" type="button" data-scroll-y="3940">
+                  <img class="store-button-icon store-button-icon-play" src="./assets/google-play-icon.svg" alt="" />
+                  <span class="store-button-copy">
+                    <small>Android 下載</small>
+                    <span class="store-button-title">Google Play</span>
                   </span>
                 </button>
               </div>
               <div class="qr-row">
-                <img src="./assets/qr.png" alt="iOS 下載二維碼" />
-                <img src="./assets/qr.png" alt="Android 下載二維碼" />
+                <img src="./assets/qr-ios.svg" alt="iOS 下載二維碼" />
+                <img src="./assets/qr-google-play.svg" alt="Google Play 下載二維碼" />
               </div>
             </div>
 
@@ -92,6 +91,15 @@
                   <img class="home-mock-camera-highlight" src="./assets/mock-camera-oval-highlight.svg" alt="" />
                 </div>
               </div>
+            </div>
+          </section>
+
+          <section class="app-intro" aria-label="App 介紹">
+            <div class="section-title line-title intro-title">App介紹</div>
+            <div class="app-intro-panel" id="about">
+              <p>
+                RLC 真實人生挑戰是一款結合真實任務挑戰、成長等級、積分獎勵與社交分享的互動平台。用戶可參與各類現實場景挑戰，完成任務後上傳照片或影片進行驗證，即可獲得經驗值與積分獎勵，逐步提升等級，解鎖更多挑戰內容，獲取更多積分兌換禮品，並在社區分享自己的成長與挑戰歷程。
+              </p>
             </div>
           </section>
 
@@ -156,38 +164,94 @@
             </div>
           </section>
 
-          <section class="about" aria-label="App 介紹與聯絡我們">
-            <div class="text-block" id="about">
-              <h2>App介紹</h2>
-              <p>
-                RLC 真實人生挑戰是一款結合真實任務挑戰、成長等級、積分獎勵與社交分享的互動平台。用戶可參與各類現實場景挑戰，完成任務後上傳照片或影片進行驗證，即可獲得經驗值與積分獎勵，逐步提升等級，解鎖更多挑戰內容，獲取更多積分兌換禮品，並在社區分享自己的成長與挑戰歷程。
-              </p>
-            </div>
-            <div class="text-block contact-block" id="contact">
-              <h2>聯絡我們</h2>
-              <p>
-                如果您在使用 RLC 真實人生挑戰過程中遇到任何問題，或對產品功能有任何建議與反饋，歡迎透過以下方式與我們聯絡，我們將盡快為您提供協助與支援。<br />
-                ☎️ 電話：+852 67470649
-              </p>
-            </div>
-          </section>
-
           <section class="showcase" aria-label="App 頁面展示">
             <div class="showcase-panel"></div>
-            <button class="round-nav left" type="button" aria-label="上一張">‹</button>
-            <button class="round-nav right" type="button" aria-label="下一張">›</button>
-            <article class="showcase-item showcase-left">
-              <div class="phone big-phone"><img src="./assets/showcase-1.png" alt="首頁挑戰列表畫面" /></div>
-              <p>參與真實世界挑戰任務，完成指定目標並提交照片或影片驗證，透過評核即可獲得獎勵。</p>
-            </article>
-            <article class="showcase-item showcase-mid">
-              <div class="phone big-phone"><img src="./assets/showcase-3.png" alt="會員成長體系畫面" /></div>
-              <p>通過參與挑戰、完成任務及持續打卡累積經驗值，不斷提升會員等級，解鎖更多專屬獎勵與成長權益。</p>
-            </article>
-            <article class="showcase-item showcase-right">
-              <div class="phone big-phone"><img src="./assets/showcase-2.png" alt="個人資料與動態畫面" /></div>
-              <p>在這裡查看你的等級、積分、挑戰紀錄及個人動態，記錄每一次成長與突破，見證屬於自己的探索旅程。</p>
-            </article>
+            <button class="round-nav left" type="button" aria-label="上一張" data-carousel-dir="prev">
+              <span class="round-nav-arrow round-nav-arrow-left" aria-hidden="true"></span>
+            </button>
+            <button class="round-nav right" type="button" aria-label="下一張" data-carousel-dir="next">
+              <span class="round-nav-arrow round-nav-arrow-right" aria-hidden="true"></span>
+            </button>
+            <div class="showcase-viewport">
+              <div class="showcase-track">
+                <div class="showcase-page">
+                  <article class="showcase-item">
+                    <div class="showcase-phone-slot">
+                      <div class="showcase-phone" aria-hidden="true" data-node-id="459:1074">
+                        <div class="showcase-phone-shell"></div>
+                        <div class="showcase-phone-screen"><img src="./assets/showcase-5.png" alt="挑戰打卡審核畫面" /></div>
+                        <div class="showcase-phone-island"><span class="showcase-phone-island-dot"></span><span class="showcase-phone-island-line"></span></div>
+                        <span class="showcase-phone-antenna antenna-top"></span><span class="showcase-phone-antenna antenna-left-top"></span><span class="showcase-phone-antenna antenna-left-bottom"></span><span class="showcase-phone-antenna antenna-right-top"></span><span class="showcase-phone-antenna antenna-right-bottom"></span><span class="showcase-phone-antenna antenna-bottom"></span>
+                        <span class="showcase-phone-button button-silent"></span><span class="showcase-phone-button button-plus"></span><span class="showcase-phone-button button-minus"></span><span class="showcase-phone-button button-power"></span>
+                      </div>
+                    </div>
+                    <p>參與真實世界挑戰任務，完成指定目標並提交照片或影片驗證，透過評核即可獲得獎勵。</p>
+                  </article>
+                  <article class="showcase-item">
+                    <div class="showcase-phone-slot">
+                      <div class="showcase-phone" aria-hidden="true" data-node-id="485:1403">
+                        <div class="showcase-phone-shell"></div>
+                        <div class="showcase-phone-screen"><img src="./assets/showcase-6.png" alt="挑戰社群分享畫面" /></div>
+                        <div class="showcase-phone-island"><span class="showcase-phone-island-dot"></span><span class="showcase-phone-island-line"></span></div>
+                        <span class="showcase-phone-antenna antenna-top"></span><span class="showcase-phone-antenna antenna-left-top"></span><span class="showcase-phone-antenna antenna-left-bottom"></span><span class="showcase-phone-antenna antenna-right-top"></span><span class="showcase-phone-antenna antenna-right-bottom"></span><span class="showcase-phone-antenna antenna-bottom"></span>
+                        <span class="showcase-phone-button button-silent"></span><span class="showcase-phone-button button-plus"></span><span class="showcase-phone-button button-minus"></span><span class="showcase-phone-button button-power"></span>
+                      </div>
+                    </div>
+                    <p>分享你的挑戰歷程、生活點滴與精彩瞬間，與其他挑戰者交流互動，獲得更多靈感與成長動力。</p>
+                  </article>
+                  <article class="showcase-item">
+                    <div class="showcase-phone-slot">
+                      <div class="showcase-phone" aria-hidden="true" data-node-id="513:1432">
+                        <div class="showcase-phone-shell"></div>
+                        <div class="showcase-phone-screen"><img src="./assets/showcase-7.png" alt="積分兌換好禮畫面" /></div>
+                        <div class="showcase-phone-island"><span class="showcase-phone-island-dot"></span><span class="showcase-phone-island-line"></span></div>
+                        <span class="showcase-phone-antenna antenna-top"></span><span class="showcase-phone-antenna antenna-left-top"></span><span class="showcase-phone-antenna antenna-left-bottom"></span><span class="showcase-phone-antenna antenna-right-top"></span><span class="showcase-phone-antenna antenna-right-bottom"></span><span class="showcase-phone-antenna antenna-bottom"></span>
+                        <span class="showcase-phone-button button-silent"></span><span class="showcase-phone-button button-plus"></span><span class="showcase-phone-button button-minus"></span><span class="showcase-phone-button button-power"></span>
+                      </div>
+                    </div>
+                    <p>透過完成挑戰累積積分，兌換各類精選商品與實用好禮，讓每一次努力都能獲得真實回報。</p>
+                  </article>
+                </div>
+                <div class="showcase-page">
+                  <article class="showcase-item">
+                    <div class="showcase-phone-slot">
+                      <div class="showcase-phone" aria-hidden="true" data-node-id="516:1475">
+                        <div class="showcase-phone-shell"></div>
+                        <div class="showcase-phone-screen"><img src="./assets/showcase-8.png" alt="每日挑戰任務畫面" /></div>
+                        <div class="showcase-phone-island"><span class="showcase-phone-island-dot"></span><span class="showcase-phone-island-line"></span></div>
+                        <span class="showcase-phone-antenna antenna-top"></span><span class="showcase-phone-antenna antenna-left-top"></span><span class="showcase-phone-antenna antenna-left-bottom"></span><span class="showcase-phone-antenna antenna-right-top"></span><span class="showcase-phone-antenna antenna-right-bottom"></span><span class="showcase-phone-antenna antenna-bottom"></span>
+                        <span class="showcase-phone-button button-silent"></span><span class="showcase-phone-button button-plus"></span><span class="showcase-phone-button button-minus"></span><span class="showcase-phone-button button-power"></span>
+                      </div>
+                    </div>
+                    <p>每日更新多元真實人生挑戰任務，涵蓋生活、運動、學習及探索等主題，讓成長變得更有趣。</p>
+                  </article>
+                  <article class="showcase-item">
+                    <div class="showcase-phone-slot">
+                      <div class="showcase-phone" aria-hidden="true" data-node-id="516:1502">
+                        <div class="showcase-phone-shell"></div>
+                        <div class="showcase-phone-screen"><img src="./assets/showcase-9.png" alt="會員等級成長畫面" /></div>
+                        <div class="showcase-phone-island"><span class="showcase-phone-island-dot"></span><span class="showcase-phone-island-line"></span></div>
+                        <span class="showcase-phone-antenna antenna-top"></span><span class="showcase-phone-antenna antenna-left-top"></span><span class="showcase-phone-antenna antenna-left-bottom"></span><span class="showcase-phone-antenna antenna-right-top"></span><span class="showcase-phone-antenna antenna-right-bottom"></span><span class="showcase-phone-antenna antenna-bottom"></span>
+                        <span class="showcase-phone-button button-silent"></span><span class="showcase-phone-button button-plus"></span><span class="showcase-phone-button button-minus"></span><span class="showcase-phone-button button-power"></span>
+                      </div>
+                    </div>
+                    <p>累積經驗值提升會員等級，解鎖更多專屬權益、高級挑戰任務及豐富獎勵，見證自己的成長歷程。</p>
+                  </article>
+                  <article class="showcase-item">
+                    <div class="showcase-phone-slot">
+                      <div class="showcase-phone" aria-hidden="true" data-node-id="516:1556">
+                        <div class="showcase-phone-shell"></div>
+                        <div class="showcase-phone-screen"><img src="./assets/showcase-10.png" alt="個人資料成長數據畫面" /></div>
+                        <div class="showcase-phone-island"><span class="showcase-phone-island-dot"></span><span class="showcase-phone-island-line"></span></div>
+                        <span class="showcase-phone-antenna antenna-top"></span><span class="showcase-phone-antenna antenna-left-top"></span><span class="showcase-phone-antenna antenna-left-bottom"></span><span class="showcase-phone-antenna antenna-right-top"></span><span class="showcase-phone-antenna antenna-right-bottom"></span><span class="showcase-phone-antenna antenna-bottom"></span>
+                        <span class="showcase-phone-button button-silent"></span><span class="showcase-phone-button button-plus"></span><span class="showcase-phone-button button-minus"></span><span class="showcase-phone-button button-power"></span>
+                      </div>
+                    </div>
+                    <p>管理個人資料、查看挑戰紀錄、追蹤積分與等級進度，隨時掌握自己的挑戰成果與成長數據。</p>
+                  </article>
+                </div>
+              </div>
+            </div>
           </section>
 
           <section class="cta" aria-label="立即下載 Real Life Challenge" data-node-id="476:1329">
@@ -196,21 +260,29 @@
               <h2>立即下載 <strong>Real Life Challenge</strong></h2>
               <p>開啟你的真實人生挑戰之旅！</p>
             </div>
-            <div class="cta-qr-wrap" aria-label="下載二維碼" data-node-id="476:1333">
-              <img class="cta-qr-frame" src="./assets/cta-qr-frame.svg" alt="" data-node-id="476:1334" />
-              <img class="cta-qr-code" src="./assets/cta-qr-code.png" alt="下載二維碼" data-node-id="476:1335" />
-            </div>
-            <div class="cta-buttons">
-              <button class="cta-store cta-store-ios jump" type="button" data-scroll-y="4498" data-node-id="476:1337">
-                <img class="cta-store-icon cta-store-ios-icon" src="./assets/cta-ios-icon.svg" alt="" data-node-id="476:1343" />
-                <span class="cta-store-kicker">Download on the</span>
-                <span class="cta-store-name">App Store</span>
-              </button>
-              <button class="cta-store cta-store-android jump" type="button" data-scroll-y="4498" data-node-id="476:1338">
-                <img class="cta-store-icon cta-store-android-icon" src="./assets/cta-android-icon.svg" alt="" data-node-id="476:1346" />
-                <span class="cta-store-kicker">Download on the</span>
-                <span class="cta-store-name">Android</span>
-              </button>
+            <div class="cta-downloads" aria-label="下載方式">
+              <div class="cta-download">
+                <div class="cta-qr-wrap" aria-label="iOS 下載二維碼">
+                  <img class="cta-qr-frame" src="./assets/cta-qr-frame.svg" alt="" />
+                  <img class="cta-qr-code" src="./assets/qr-ios.svg" alt="iOS 下載二維碼" />
+                </div>
+                <button class="cta-store cta-store-ios" type="button" data-node-id="476:1337">
+                  <img class="cta-store-icon cta-store-ios-icon" src="./assets/cta-ios-icon.svg" alt="" data-node-id="476:1343" />
+                  <span class="cta-store-kicker">iOS 下載</span>
+                  <span class="cta-store-name">App Store</span>
+                </button>
+              </div>
+              <div class="cta-download">
+                <div class="cta-qr-wrap" aria-label="Google Play 下載二維碼">
+                  <img class="cta-qr-frame" src="./assets/cta-qr-frame.svg" alt="" />
+                  <img class="cta-qr-code" src="./assets/qr-google-play.svg" alt="Google Play 下載二維碼" />
+                </div>
+                <button class="cta-store cta-store-android" type="button" data-node-id="476:1338">
+                  <img class="cta-store-icon cta-store-play-icon" src="./assets/google-play-icon.svg" alt="" />
+                  <span class="cta-store-kicker">Android 下載</span>
+                  <span class="cta-store-name">Google Play</span>
+                </button>
+              </div>
             </div>
           </section>
 
@@ -219,12 +291,12 @@
       <footer class="site-footer">
         <div class="footer-brand">
           <img src="./assets/logo.png" alt="" />
-          <span>真實人生挑戰</span>
+          <span>Real Life Challenge Limited</span>
         </div>
-        <p>© 2026 Rlc Co., Ltd. All rights reserved.</p>
+        <p>© 2026 Real Life Challenge Limited. All rights reserved.</p>
         <nav>
-          <a href="#">隱私政策</a>
-          <a href="#">使用條款</a>
+          <a href="./privacy.html">隱私政策</a>
+          <a href="./terms.html">使用條款</a>
         </nav>
       </footer>
     </main>
