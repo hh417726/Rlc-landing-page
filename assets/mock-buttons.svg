@@ -1,0 +1,8 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 318.226 151.663" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Buttons">
+<path id="Power" fill-rule="evenodd" clip-rule="evenodd" d="M315.99 61.2621H316.735C317.558 61.2621 318.226 61.9311 318.226 62.7563V134.478C318.226 135.303 317.558 135.972 316.735 135.972H315.99V61.2621Z" fill="var(--fill-0, #121515)"/>
+<path id="Volume Down" fill-rule="evenodd" clip-rule="evenodd" d="M0.000278905 106.089C0.000278905 105.264 0.667607 104.595 1.4908 104.595H2.23606V151.663H1.4908C0.667607 151.663 0.000278905 150.994 0.000278905 150.168V106.089Z" fill="var(--fill-0, #121515)"/>
+<path id="Volume Up" fill-rule="evenodd" clip-rule="evenodd" d="M0.000631035 47.0695C0.000631035 46.2442 0.667959 45.5753 1.49115 45.5753H2.23641V92.6427H1.49115C0.667959 92.6427 0.000631035 91.9737 0.000631035 91.1485V47.0695Z" fill="var(--fill-0, #121515)"/>
+<path id="Mute Switch" fill-rule="evenodd" clip-rule="evenodd" d="M0 1.4942C0 0.668978 0.667328 0 1.49052 0H2.23578V24.6544H1.49052C0.667328 24.6544 0 23.9854 0 23.1602V1.4942Z" fill="var(--fill-0, #121515)"/>
+</g>
+</svg>
