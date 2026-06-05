@@ -1096,9 +1096,9 @@ button {
 .cta {
   position: absolute;
   left: 92px;
-  top: 4040px;
+  top: 3980px;
   width: 1736px;
-  height: 308px;
+  height: 360px;
 }
 
 .cta-border {
@@ -1106,7 +1106,7 @@ button {
   left: -1px;
   top: -1px;
   width: 1738px;
-  height: 310px;
+  height: 362px;
   pointer-events: none;
 }
 
