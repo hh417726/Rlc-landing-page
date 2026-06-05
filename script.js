@@ -33,44 +33,85 @@
   });
 
   const showcaseTrack = document.querySelector(".showcase-track");
-  const showcaseViewport = document.querySelector(".showcase-viewport");
   const showcasePrev = document.querySelector('[data-carousel-dir="prev"]');
   const showcaseNext = document.querySelector('[data-carousel-dir="next"]');
 
-  if (showcaseTrack && showcaseViewport && showcasePrev && showcaseNext) {
-    const pages = Array.from(showcaseTrack.children);
-    let activePage = 0;
+  if (showcaseTrack && showcasePrev && showcaseNext) {
+    const slots = Array.from(showcaseTrack.querySelectorAll("[data-showcase-slot]"));
+    const showcaseItems = [
+      {
+        nodeId: "459:1074",
+        src: "./assets/showcase-5.png",
+        alt: "挑戰打卡審核畫面",
+        text: "參與真實世界挑戰任務，完成指定目標並提交照片或影片驗證，透過評核即可獲得獎勵。",
+      },
+      {
+        nodeId: "485:1403",
+        src: "./assets/showcase-6.png",
+        alt: "挑戰社群分享畫面",
+        text: "分享你的挑戰歷程、生活點滴與精彩瞬間，與其他挑戰者交流互動，獲得更多靈感與成長動力。",
+      },
+      {
+        nodeId: "513:1432",
+        src: "./assets/showcase-7.png",
+        alt: "積分兌換好禮畫面",
+        text: "透過完成挑戰累積積分，兌換各類精選商品與實用好禮，讓每一次努力都能獲得真實回報。",
+      },
+      {
+        nodeId: "516:1475",
+        src: "./assets/showcase-8.png",
+        alt: "每日挑戰任務畫面",
+        text: "每日更新多元真實人生挑戰任務，涵蓋生活、運動、學習及探索等主題，讓成長變得更有趣。",
+      },
+      {
+        nodeId: "516:1502",
+        src: "./assets/showcase-9.png",
+        alt: "會員等級成長畫面",
+        text: "累積經驗值提升會員等級，解鎖更多專屬權益、高級挑戰任務及豐富獎勵，見證自己的成長歷程。",
+      },
+      {
+        nodeId: "516:1556",
+        src: "./assets/showcase-10.png",
+        alt: "個人資料成長數據畫面",
+        text: "管理個人資料、查看挑戰紀錄、追蹤積分與等級進度，隨時掌握自己的挑戰成果與成長數據。",
+      },
+    ];
+    let activeIndex = 0;
 
     function updateShowcase() {
-      if (pages.length === 0) {
+      if (slots.length === 0 || showcaseItems.length === 0) {
         return;
       }
 
-      const pageWidth = showcaseViewport.clientWidth;
-      const maxPage = Math.max(0, pages.length - 1);
+      slots.forEach((slot, slotIndex) => {
+        const item = showcaseItems[(activeIndex + slotIndex) % showcaseItems.length];
+        const phone = slot.querySelector(".showcase-phone");
+        const image = slot.querySelector(".showcase-phone-screen img");
+        const text = slot.querySelector("p");
 
-      activePage = Math.min(activePage, maxPage);
-      showcaseTrack.style.transform = `translateX(${-activePage * pageWidth}px)`;
-      showcasePrev.disabled = activePage === 0;
-      showcaseNext.disabled = activePage === maxPage;
+        if (phone) {
+          phone.setAttribute("data-node-id", item.nodeId);
+        }
+        if (image) {
+          image.setAttribute("src", item.src);
+          image.setAttribute("alt", item.alt);
+        }
+        if (text) {
+          text.textContent = item.text;
+        }
+      });
     }
 
     showcasePrev.addEventListener("click", () => {
-      if (activePage > 0) {
-        activePage -= 1;
-        updateShowcase();
-      }
+      activeIndex = (activeIndex - 1 + showcaseItems.length) % showcaseItems.length;
+      updateShowcase();
     });
 
     showcaseNext.addEventListener("click", () => {
-      const maxPage = Math.max(0, pages.length - 1);
-      if (activePage < maxPage) {
-        activePage += 1;
-        updateShowcase();
-      }
+      activeIndex = (activeIndex + 1) % showcaseItems.length;
+      updateShowcase();
     });
 
     updateShowcase();
-    window.addEventListener("resize", updateShowcase, { passive: true });
   }
 })();
